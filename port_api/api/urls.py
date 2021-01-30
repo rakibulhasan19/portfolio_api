@@ -1,8 +1,8 @@
 
 from django.urls import path
-from .views import home_list_get,home_details
+from .views import homeList,homeDetails
 
 urlpatterns = [
-    path('home/', home_list_get),
-    path('home/<int:pk>/',home_details)
+    path('home/', homeList.as_view()),
+    path('home/<int:id>/',homeDetails.as_view())
 ]
